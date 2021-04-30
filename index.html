@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>計算機</title>
+
+<link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/cupertino/jquery-ui.css" />
+<!--
+<link type="text/css" rel="stylesheet" href="style/calculator.css" />
+-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="http://demo.abgne.tw/jquery/plugins/0165/js/calculator.js"></script>
+
+
+<style type="text/css">
+.bold { font-weight:bold; }
+.boldBlue, .boldBlue a { font-weight:bold;color:#00f; }
+.boldRed { font-weight:bold;color:#f00; }
+
+ .calc-wrapper {
+  font: 11px Arial, Helvetica, sans-serif;
+
+margin-left:200px;
+ }
+</style>
+
+</head>
+
+<body>
+<script type="text/javascript">
+ $(function(){
+  $.fn.calculator.hide = function(calc){
+   calc.fadeOut(500);
+  };
+  $('#calc').calculator({
+   movable: true,
+   resizable: true, 
+   defaultOpen: false
+  });
+
+  $('#showCalc').click(function(){
+
+   $('#calc').show();
+
+   return false;
+  })
+ });
+</script>
+ <a id="showCalc" href="##"><span style="font-size:18px;color:red;margin-left:200px;">顯示計算機</span></a>
+
+ <div id="calc"></div>
+</body>
+</html>
